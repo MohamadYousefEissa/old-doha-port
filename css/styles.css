@@ -1,0 +1,136 @@
+body {
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+:root {
+  --color: rgb(25, 73, 121);
+  --color-gold: rgb(230, 195, 10);
+}
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff80;
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+nav > div {
+  box-shadow: 0 0 10px black;
+}
+#main-bg {
+  height: 100vh;
+  height: 100dvh;
+  object-fit: cover;
+}
+#slider1-section button {
+  background: none;
+  width: 70px;
+  height: 70px;
+  outline: 0;
+  border: 1px solid var(--color);
+  font-size: 30px;
+  color: var(--color);
+}
+#slider1-section button:first-child {
+  border-bottom: 0;
+}
+#slider1 img {
+  width: 320px;
+  height: 500px;
+  transition: all 0.3s;
+}
+@media screen and (min-width: 1640px) {
+  #slider1 img {
+    width: 400px;
+  }
+}
+
+#slider1::-webkit-scrollbar {
+  height: 15px;
+}
+
+#slider1::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+}
+.slider1-scrollbar-line {
+  background: var(--color);
+  position: absolute;
+  width: 75%;
+  height: 1px;
+  margin-top: -8px;
+  z-index: -1;
+  right: 0;
+}
+
+#slider1 img ~ div {
+  color: white;
+  font-size: 24px;
+  transform: translate(10%, -200%);
+  font-weight: bold;
+  line-height: 0;
+  transition: all 0.3s;
+  h4 {
+    font-weight: bold;
+  }
+  p {
+    font-weight: 100;
+  }
+}
+#slider1 button {
+  width: fit-content;
+  height: fit-content;
+  font-size: 18px;
+  padding: 0.2rem 1.2rem;
+  border-radius: 3px;
+  background: var(--color-gold);
+  color: white;
+  font-weight: bold;
+  border: 0;
+  transform: translate(85%, -400%);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+#slider1 > div:hover img {
+  filter: brightness(30%);
+}
+#slider1 > div:hover img ~ div {
+  transform: translate(0%, -650%);
+  text-align: center;
+  line-height: 5px;
+}
+#slider1 > div:hover img ~ button {
+  opacity: 1;
+}
+
+#grid-section img ~ p {
+  margin-top: -2rem;
+  margin-left: 1rem;
+  color: white;
+  font-weight: bold;
+}
+.rm-btn {
+  width: fit-content;
+  height: fit-content;
+  font-size: 18px;
+  padding: 0.2rem 1.2rem;
+  border-radius: 3px;
+  background: var(--color-gold);
+  color: white;
+  font-weight: bold;
+  border: 0;
+}
+.odp-bg {
+  position: absolute;
+  right: 0;
+  margin-top: 6rem;
+  z-index: -1;
+}
+
+@media screen and (max-width: 767px) {
+  nav img {
+    width: 150px;
+  }
+  #slider1-section button {
+    width: 50px;
+    height: 50px;
+  }
+}
