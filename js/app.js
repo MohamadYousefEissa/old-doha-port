@@ -15,7 +15,7 @@ leftBtn.parentElement.addEventListener("click", () => {
 rightBtn.parentElement.addEventListener("click", () => {
   slider1.scrollTo({
     top: 0,
-    left: 1000,
+    left: slider1.scrollWidth,
     behavior: "smooth",
   });
 });
